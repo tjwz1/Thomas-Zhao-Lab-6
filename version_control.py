@@ -27,11 +27,9 @@ if __name__ == "__main__":
           encode(password)
           print("Your password has been encoded and stored!")
           print()
-          pass
       if choice=='2':
           print("The encoded password is",encoded_password, end =' ')
           print("and the original password is",orig_password)
           print()
-          pass
       if choice=='3':
           run = False
