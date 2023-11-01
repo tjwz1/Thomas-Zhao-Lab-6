@@ -1,4 +1,5 @@
 #Thomas Zhao
+#Elan Loewinger
 def menu():
   print('Menu')
   print(8*'-')
