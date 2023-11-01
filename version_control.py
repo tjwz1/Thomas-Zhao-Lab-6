@@ -7,7 +7,7 @@ def menu():
   print("2. Decode")
   print("3. Quit")
   print()
-  
+
 def encode(password):
   encode_password = ''
   x = 0
@@ -16,17 +16,18 @@ def encode(password):
     if x>9:
       x = x%10
     encode_password += str(x)
-    
+  return encode_password
+
 def decode(password):
   decoded_password = ''
   x = 0
-  for a in range(len(password)):
+  for a in range(len(str(password))):
     x = int(password[a])-3
     if x<0:
       x = x + 10
     decoded_password += str(x)
   return decoded_password
-  
+
 if __name__ == "__main__":
     menu()
     run = True
@@ -36,12 +37,12 @@ if __name__ == "__main__":
       choice = input("Please enter an option: ")
       if choice =="1":
           password = input("Please enter your password to encode: ")
-          encode(password)
+          encoded_password = encode(password)
           print("Your password has been encoded and stored!")
           print()
       if choice=='2':
           print("The encoded password is",encoded_password, end =' ')
-          print("and the original password is",orig_password)
+          print("and the original password is", decode(encoded_password))
           print()
       if choice=='3':
           run = False
